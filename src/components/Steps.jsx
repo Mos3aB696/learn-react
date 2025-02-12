@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -63,5 +63,21 @@ export default function App() {
         }}
       ></div>
     </div>
+  );
+}
+
+function Button({ onClick, condition, children }) {
+  return (
+    <button
+      style={{
+        background: condition ? "#ccc" : "#f0ad1b",
+        color: "#373737",
+        opacity: condition ? 0.5 : 1,
+        cursor: condition ? "not-allowed" : "pointer",
+      }}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }

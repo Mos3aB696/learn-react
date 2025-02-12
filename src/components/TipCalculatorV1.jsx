@@ -1,10 +1,5 @@
 import { useState } from "react";
 
-import Bill from "./Bill";
-import Tip from "./Tip";
-import Total from "./Total";
-import Button from "./Button";
-
 export default function TipCalculatorV1() {
   const [bill, setBill] = useState("");
   const [myTip, setMyTip] = useState(0);
@@ -54,5 +49,51 @@ export default function TipCalculatorV1() {
         </>
       )}
     </div>
+  );
+}
+
+function Bill({ bill, onBillChange }) {
+  return (
+    <div>
+      <label>How much was the bill? </label>
+      <input
+        type="number"
+        placeholder="Enter Bill Amount"
+        value={bill}
+        onChange={onBillChange}
+      />
+    </div>
+  );
+}
+
+function Tip({ text, tip, onTipChange }) {
+  return (
+    <div>
+      <label> {text} </label>
+      <select value={tip} onChange={onTipChange}>
+        <option value="0">Dissatisfied 0%</option>
+        <option value="5">It was Okay 5%</option>
+        <option value="10">It was Good 10%</option>
+        <option value="20">Absolutely Amazing! 20%</option>
+      </select>
+    </div>
+  );
+}
+
+function Total({ totalBill, bill, tip }) {
+  return (
+    <div>
+      <h2>
+        You pay: ${totalBill} (${bill} + ${tip} Tip)
+      </h2>
+    </div>
+  );
+}
+
+function Button({ onReset }) {
+  return (
+    <button className="btn" onClick={onReset}>
+      RESET
+    </button>
   );
 }

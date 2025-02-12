@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -297,3 +295,27 @@ div.selected {
   border: 2px solid #f0ad1b;
 }
 /*! End Calculator */
+
+/*! Start TextExpander  */
+
+.expander {
+  width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #373737;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #0000009d;
+  border-top: 6px solid #59c837;
+
+  display: grid;
+  gap: 10px;
+}
+.box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: #f7f7f7;
+  color: #373737;
+}
+/*! End TextExpander  */
