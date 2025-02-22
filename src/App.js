@@ -8,6 +8,8 @@ import Steps from "./components/Steps";
 import StarRating from "./components/StarRating";
 import TextExpander from "./components/TextExpander";
 import CurrencyConverter from "./components/CurrencyConverter";
+import BankAccount from "./components/BankAccount";
+// import GeoLocation from "./components/GeoLocation";
 
 function Test() {
   const [movieRating, setMovieRating] = useState(0);
@@ -21,6 +23,8 @@ function Test() {
 export default function App() {
   return (
     <>
+    <BankAccount />
+    <hr />
       <div className="challanges">
         <StateChallangeOne />
         <StateChallangeTwo />
@@ -77,6 +81,7 @@ export default function App() {
         </TextExpander>
       </div>
       <CurrencyConverter />
+      {/* <GeoLocation /> */}
     </>
   );
 }
